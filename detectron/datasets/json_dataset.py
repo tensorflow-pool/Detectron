@@ -26,7 +26,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import copy
-import cPickle as pickle
 import logging
 import numpy as np
 import os
@@ -40,12 +39,11 @@ from pycocotools import mask as COCOmask
 from pycocotools.coco import COCO
 
 from detectron.core.config import cfg
-from detectron.datasets.dataset_catalog import ANN_FN
-from detectron.datasets.dataset_catalog import DATASETS
-from detectron.datasets.dataset_catalog import IM_DIR
-from detectron.datasets.dataset_catalog import IM_PREFIX
 from detectron.utils.timer import Timer
+import detectron.datasets.dataset_catalog as dataset_catalog
 import detectron.utils.boxes as box_utils
+from detectron.utils.io import load_object
+import detectron.utils.segms as segm_utils
 
 logger = logging.getLogger(__name__)
 
@@ -54,19 +52,17 @@ class JsonDataset(object):
     """A class representing a COCO json dataset."""
 
     def __init__(self, name):
-        assert name in DATASETS.keys(), \
+        assert dataset_catalog.contains(name), \
             'Unknown dataset name: {}'.format(name)
-        assert os.path.exists(DATASETS[name][IM_DIR]), \
-            'Image directory \'{}\' not found'.format(DATASETS[name][IM_DIR])
-        assert os.path.exists(DATASETS[name][ANN_FN]), \
-            'Annotation file \'{}\' not found'.format(DATASETS[name][ANN_FN])
+        assert os.path.exists(dataset_catalog.get_im_dir(name)), \
+            'Im dir \'{}\' not found'.format(dataset_catalog.get_im_dir(name))
+        assert os.path.exists(dataset_catalog.get_ann_fn(name)), \
+            'Ann fn \'{}\' not found'.format(dataset_catalog.get_ann_fn(name))
         logger.debug('Creating: {}'.format(name))
         self.name = name
-        self.image_directory = DATASETS[name][IM_DIR]
-        self.image_prefix = (
-            '' if IM_PREFIX not in DATASETS[name] else DATASETS[name][IM_PREFIX]
-        )
-        self.COCO = COCO(DATASETS[name][ANN_FN])
+        self.image_directory = dataset_catalog.get_im_dir(name)
+        self.image_prefix = dataset_catalog.get_im_prefix(name)
+        self.COCO = COCO(dataset_catalog.get_ann_fn(name))
         self.debug_timer = Timer()
         # Set up dataset classes
         category_ids = self.COCO.getCatIds()
@@ -172,8 +168,8 @@ class JsonDataset(object):
         width = entry['width']
         height = entry['height']
         for obj in objs:
-            # crowd regions are RLE encoded and stored as dicts
-            if isinstance(obj['segmentation'], list):
+            # crowd regions are RLE encoded
+            if segm_utils.is_poly(obj['segmentation']):
                 # Valid polygons have >= 3 points, so require >= 6 coordinates
                 obj['segmentation'] = [
                     p for p in obj['segmentation'] if len(p) >= 6
@@ -255,9 +251,11 @@ class JsonDataset(object):
     ):
         """Add proposals from a proposals file to an roidb."""
         logger.info('Loading proposals from: {}'.format(proposal_file))
-        with open(proposal_file, 'r') as f:
-            proposals = pickle.load(f)
+        proposals = load_object(proposal_file)
+
         id_field = 'indexes' if 'indexes' in proposals else 'ids'  # compat fix
+
+        _remove_proposals_not_in_roidb(proposals, roidb, id_field)
         _sort_proposals(proposals, id_field)
         box_list = []
         for i, entry in enumerate(roidb):
@@ -457,3 +455,11 @@ def _sort_proposals(proposals, id_field):
     fields_to_sort = ['boxes', id_field, 'scores']
     for k in fields_to_sort:
         proposals[k] = [proposals[k][i] for i in order]
+
+
+def _remove_proposals_not_in_roidb(proposals, roidb, id_field):
+    # fix proposals so they don't contain entries for images not in the roidb
+    roidb_ids = set({entry["id"] for entry in roidb})
+    keep = [i for i, id in enumerate(proposals[id_field]) if id in roidb_ids]
+    for f in ['boxes', id_field, 'scores']:
+        proposals[f] = [proposals[f][i] for i in keep]

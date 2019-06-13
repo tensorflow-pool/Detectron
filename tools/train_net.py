@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 # Copyright (c) 2017-present, Facebook, Inc.
 #
@@ -73,7 +73,7 @@ def parse_args():
     )
     parser.add_argument(
         'opts',
-        help='See lib/core/config.py for all options',
+        help='See detectron/core/config.py for all options',
         default=None,
         nargs=argparse.REMAINDER
     )
@@ -99,6 +99,10 @@ def main():
     if args.opts is not None:
         merge_cfg_from_list(args.opts)
     assert_and_infer_cfg()
+    smi_output, cuda_ver, cudnn_ver = c2_utils.get_nvidia_info()
+    logger.info("cuda version : {}".format(cuda_ver))
+    logger.info("cudnn version: {}".format(cudnn_ver))
+    logger.info("nvidia-smi output:\n{}".format(smi_output))
     logger.info('Training with config:')
     logger.info(pprint.pformat(cfg))
     # Note that while we set the numpy random seed network training will not be

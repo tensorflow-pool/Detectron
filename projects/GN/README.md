@@ -23,8 +23,8 @@ This file provides Mask R-CNN baseline results and models trained with [Group No
 
 These models are trained in Caffe2 on the standard ImageNet-1k dataset, using GroupNorm with 32 groups (G=32).
 
-- [R-50-GN.pkl](https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/47261647/R-50-GN.pkl): ResNet-50 with GN, 24.0\% top-1 error (center-crop).
-- [R-101-GN.pkl](https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/47592356/R-101-GN.pkl): ResNet-101 with GN, 22.6\% top-1 error (center-crop).
+- [R-50-GN.pkl](https://dl.fbaipublicfiles.com/detectron/ImageNetPretrained/47261647/R-50-GN.pkl): ResNet-50 with GN, 24.0\% top-1 error (center-crop).
+- [R-101-GN.pkl](https://dl.fbaipublicfiles.com/detectron/ImageNetPretrained/47592356/R-101-GN.pkl): ResNet-101 with GN, 22.6\% top-1 error (center-crop).
 
 ## Results
 
@@ -112,11 +112,11 @@ These models are trained in Caffe2 on the standard ImageNet-1k dataset, using Gr
 <td align="right"><sup><sub>35.7</sub></sup></td>
 <td align="right"><sup><sub>48616381</sub></sup></td>
 <td align="left"><sup><sub>
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48616381/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_2x_gn_0416.13_23_38.bTlTI97Q/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48616381/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_2x_gn_0416.13_23_38.bTlTI97Q/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48616381/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_2x_gn_0416.13_23_38.bTlTI97Q/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48616381/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_2x_gn_0416.13_23_38.bTlTI97Q/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48616381/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_2x_gn_0416.13_23_38.bTlTI97Q/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48616381/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_2x_gn_0416.13_23_38.bTlTI97Q/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
 </tr>
 <tr>
 <td align="left"><sup><sub>R-101-FPN, GN</sub></sup></td>
@@ -131,11 +131,11 @@ These models are trained in Caffe2 on the standard ImageNet-1k dataset, using Gr
 <td align="right"><sup><sub>36.8</sub></sup></td>
 <td align="right"><sup><sub>48616724</sub></sup></td>
 <td align="left"><sup><sub>
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48616724/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_2x_gn_0416.13_26_34.GLnri4GR/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48616724/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_2x_gn_0416.13_26_34.GLnri4GR/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48616724/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_2x_gn_0416.13_26_34.GLnri4GR/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48616724/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_2x_gn_0416.13_26_34.GLnri4GR/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48616724/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_2x_gn_0416.13_26_34.GLnri4GR/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48616724/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_2x_gn_0416.13_26_34.GLnri4GR/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
 </tr>
 <!-- END E2E MASK RCNN GN TABLE -->
 </tbody></table>
@@ -176,11 +176,11 @@ These models are trained in Caffe2 on the standard ImageNet-1k dataset, using Gr
 <td align="right"><sup><sub>36.1</sub></sup></td>
 <td align="right"><sup><sub>48734751</sub></sup></td>
 <td align="left"><sup><sub>
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48734751/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_3x_gn_0417.09_54_59.nwCTtPVk/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48734751/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_3x_gn_0417.09_54_59.nwCTtPVk/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48734751/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_3x_gn_0417.09_54_59.nwCTtPVk/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48734751/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_3x_gn_0417.09_54_59.nwCTtPVk/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48734751/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_3x_gn_0417.09_54_59.nwCTtPVk/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48734751/04_2018_gn_baselines/e2e_mask_rcnn_R-50-FPN_3x_gn_0417.09_54_59.nwCTtPVk/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
 </tr>
 <tr>
 <td align="left"><sup><sub>R-101-FPN, GN</sub></sup></td>
@@ -195,11 +195,11 @@ These models are trained in Caffe2 on the standard ImageNet-1k dataset, using Gr
 <td align="right"><sup><sub>37.2</sub></sup></td>
 <td align="right"><sup><sub>48734779</sub></sup></td>
 <td align="left"><sup><sub>
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48734779/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_3x_gn_0417.09_55_23.HMtcR8wg/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48734779/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_3x_gn_0417.09_55_23.HMtcR8wg/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl">model</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48734779/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_3x_gn_0417.09_55_23.HMtcR8wg/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48734779/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_3x_gn_0417.09_55_23.HMtcR8wg/output/test/coco_2014_minival/generalized_rcnn/bbox_coco_2014_minival_results.json">boxes</a>
   &nbsp;|&nbsp;
-  <a href="https://s3-us-west-2.amazonaws.com/detectron/GN/48734779/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_3x_gn_0417.09_55_23.HMtcR8wg/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
+  <a href="https://dl.fbaipublicfiles.com/detectron/GN/48734779/04_2018_gn_baselines/e2e_mask_rcnn_R-101-FPN_3x_gn_0417.09_55_23.HMtcR8wg/output/test/coco_2014_minival/generalized_rcnn/segmentations_coco_2014_minival_results.json">masks</a></sub></sup></td>
 </tr>
 <!-- END E2E MASK RCNN GN 3X TABLE -->
 </tbody></table>
@@ -236,29 +236,69 @@ GN enables to train Mask R-CNN *from scratch* without ImageNet pre-training, des
 <td align="left"><sup><sub>Mask R-CNN</sub></sup></td>
 <td align="left"><sup><sub>3x</sub></sup></td>
 <td align="right"><sup><sub>2</sub></sup></td>
-<td align="right"><sup><sub>10.5</sub></sup></td>
-<td align="right"><sup><sub>0.990</sub></sup></td>
-<td align="right"><sup><sub>74.3</sub></sup></td>
-<td align="right"><sup><sub>0.146&nbsp;+&nbsp;0.020</sub></sup></td>
-<td align="right"><sup><sub>36.2</sub></sup></td>
-<td align="right"><sup><sub>32.5</sub></sup></td>
-<td align="right"><sup><sub>49025460</sub></sup></td>
+<td align="right"><sup><sub>10.8</sub></sup></td>
+<td align="right"><sup><sub>1.087</sub></sup></td>
+<td align="right"><sup><sub>81.5</sub></sup></td>
+<td align="right"><sup><sub>0.140&nbsp;+&nbsp;0.019</sub></sup></td>
+<td align="right"><sup><sub>39.5</sub></sup></td>
+<td align="right"><sup><sub>35.2</sub></sup></td>
+<td align="right"><sup><sub>56421872</sub></sup></td>
 </tr>
 <tr>
 <td align="left"><sup><sub>R-101-FPN, GN, scratch</sub></sup></td>
 <td align="left"><sup><sub>Mask R-CNN</sub></sup></td>
 <td align="left"><sup><sub>3x</sub></sup></td>
 <td align="right"><sup><sub>2</sub></sup></td>
-<td align="right"><sup><sub>12.4</sub></sup></td>
-<td align="right"><sup><sub>1.124</sub></sup></td>
-<td align="right"><sup><sub>84.3</sub></sup></td>
-<td align="right"><sup><sub>0.180&nbsp;+&nbsp;0.019</sub></sup></td>
-<td align="right"><sup><sub>37.5</sub></sup></td>
-<td align="right"><sup><sub>33.3</sub></sup></td>
-<td align="right"><sup><sub>49024951</sub></sup></td>
+<td align="right"><sup><sub>12.7</sub></sup></td>
+<td align="right"><sup><sub>1.243</sub></sup></td>
+<td align="right"><sup><sub>93.2</sub></sup></td>
+<td align="right"><sup><sub>0.177&nbsp;+&nbsp;0.019</sub></sup></td>
+<td align="right"><sup><sub>41.0</sub></sup></td>
+<td align="right"><sup><sub>36.4</sub></sup></td>
+<td align="right"><sup><sub>56421911</sub></sup></td>
 </tr>
 <!-- END E2E MASK RCNN GN SCRATCH TABLE -->
 </tbody></table>
 
 **Notes:**
 - To reproduce these results, see the config yaml files starting with ```scratch ```.
+- These are results using ```freeze_at=0```. See this [commit](https://github.com/facebookresearch/Detectron/commit/f8ffc87ca442d8f6bd2b9aad11029b5db56d7260) about the related issue.
+
+&nbsp;
+
+<table><tbody>
+<!-- START E2E MASK RCNN GN SCRATCH TABLE -->
+<!-- TABLE HEADER -->
+<!-- Info: we use wrap text in <sup><sub></sub><sup> to make is small -->
+<!-- TABLE BODY -->
+<tr>
+<td align="left"><sup><sub><s>R-50-FPN, GN, scratch</s></sub></sup></td>
+<td align="left"><sup><sub><s>Mask R-CNN</s></sub></sup></td>
+<td align="left"><sup><sub><s>3x</s></sub></sup></td>
+<td align="right"><sup><sub><s>2</s></sub></sup></td>
+<td align="right"><sup><sub><s>10.5</s></sub></sup></td>
+<td align="right"><sup><sub><s>0.990</s></sub></sup></td>
+<td align="right"><sup><sub><s>74.3</s></sub></sup></td>
+<td align="right"><sup><sub><s>0.146&nbsp;+&nbsp;0.020</s></sub></sup></td>
+<td align="right"><sup><sub><s>36.2</s></sub></sup></td>
+<td align="right"><sup><sub><s>32.5</s></sub></sup></td>
+<td align="right"><sup><sub><s>49025460</s></sub></sup></td>
+</tr>
+<tr>
+<td align="left"><sup><sub><s>R-101-FPN, GN, scratch</s></sub></sup></td>
+<td align="left"><sup><sub><s>Mask R-CNN</s></sub></sup></td>
+<td align="left"><sup><sub><s>3x</s></sub></sup></td>
+<td align="right"><sup><sub><s>2</s></sub></sup></td>
+<td align="right"><sup><sub><s>12.4</s></sub></sup></td>
+<td align="right"><sup><sub><s>1.124</s></sub></sup></td>
+<td align="right"><sup><sub><s>84.3</s></sub></sup></td>
+<td align="right"><sup><sub><s>0.180&nbsp;+&nbsp;0.019</s></sub></sup></td>
+<td align="right"><sup><sub><s>37.5</s></sub></sup></td>
+<td align="right"><sup><sub><s>33.3</s></sub></sup></td>
+<td align="right"><sup><sub><s>49024951</s></sub></sup></td>
+</tr>
+<!-- END E2E MASK RCNN GN SCRATCH TABLE -->
+</tbody></table>
+
+**Notes:**
+- These are early results that followed the default training using ```freeze_at=2```. This means the layers of conv1 and res2 were simply random weights in the case of training from-scratch. See this [commit](https://github.com/facebookresearch/Detectron/commit/f8ffc87ca442d8f6bd2b9aad11029b5db56d7260) about the related issue.
